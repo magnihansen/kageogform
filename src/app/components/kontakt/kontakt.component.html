@@ -1,0 +1,123 @@
+<section id="contact" class="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="row">
+                    <div class="contact_contant sections">
+                        <div class="col-sm-6">
+
+                            <div class="main_contact_info">
+                                <div class="head_title">
+                                    <h3>Kontakt</h3>
+                                    <div class="separator"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="contact_info_content">
+                                        <div class="col-sm-12">
+                                            <div class="single_contact_info">
+                                                <div class="single_info_icon">
+                                                    <i class="fa fa-home"></i>
+                                                </div>
+                                                <div class="single_info_text">
+                                                    <h3>Besøg os</h3>
+                                                    <p>Musvågevej 7, 9230 Svenstrup J.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12">
+                                            <div class="single_contact_info">
+                                                <div class="single_info_icon">
+                                                    <i class="fa fa-envelope-o"></i>
+                                                </div>
+                                                <div class="single_info_text">
+                                                    <h3>Email</h3>
+                                                    <p>info@kageogform.dk</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12">
+                                            <div class="single_contact_info">
+                                                <div class="single_info_icon">
+                                                    <i class="fa fa-mobile"></i>
+                                                </div>
+                                                <div class="single_info_text">
+                                                    <h3>Telefon</h3>
+                                                    <p>27 89 55 66</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12">
+                                            <div class="single_contact_info">
+                                                <div class="single_info_icon">
+                                                    <i class="fa fa-clock-o"></i>
+                                                </div>
+                                                <div class="single_info_text">
+                                                    <h3>Åbningstider</h3>
+                                                    <p>Efter aftale</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+
+                        <div class="col-sm-6">
+                            <div class="head_title">
+                                <h3>Send besked</h3>
+                                <div class="separator"></div>
+                            </div>
+                            <div class="single_contant_left">
+                                <form id="formid" (ngSubmit)="onSubmit()" [ngFormOptions]="{updateOn:'submit'}">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <input type="text" name="firstname" placeholder="Fornavn" class="form-control" [(ngModel)]="firstname" [ngModelOptions]="{updateOn:'blur'}" />
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                    <input type="text" name="surname" placeholder="Efternavn" class="form-control" [(ngModel)]="surname" [ngModelOptions]="{updateOn:'blur'}" />
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <input type="text" name="email" placeholder="Email" class="form-control" [(ngModel)]="email" [ngModelOptions]="{updateOn:'blur'}" />
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <input type="text" name="phone" placeholder="Telefon" class="form-control" [(ngModel)]="phone" [ngModelOptions]="{updateOn:'blur'}" />
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="form-group">
+                                                <textarea name="message" class="form-control" placeholder="Besked" rows="8" [(ngModel)]="message" [ngModelOptions]="{updateOn:'blur'}"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="form-group">
+                                                <input type="submit" value="Send" class="btn btn-primary">
+                                                <div class="message_status">{{message_status}}</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

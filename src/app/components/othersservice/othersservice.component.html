@@ -1,0 +1,31 @@
+<section id="portfolio" class="othersservice">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="main_othersservice_area sections">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="head_title">
+                                <h3>Portfolio</h3>
+                                <div class="separator"></div>
+                            </div>
+
+                            <div class="main_othersservice_content">
+                                <div class="col-sm-4" *ngFor="let cake of cakes | slice:0:6;">
+                                    <div class="single_othersservice">
+                                        <div class="single_othersservice_icon">
+                                            <h4><span><i class="fa fa-birthday-cake"></i></span> {{cake.title}}</h4>
+                                        </div>
+                                        <div class="single_othersservice_content">
+                                            <p>{{cake.content}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

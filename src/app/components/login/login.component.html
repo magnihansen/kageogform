@@ -1,0 +1,29 @@
+<section id="home" class="home">
+    <div class="low_overlay">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 ">
+                    <div class="main_home_slider text-center"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="login">
+  <div class="fields">
+    <form (ngSubmit)="onSubmit()" [ngFormOptions]="{updateOn:'submit'}">
+      <div class="line">
+        <label for="email">Email:</label>
+        <input type="text" name="email" [(ngModel)]="email" [ngModelOptions]="{updateOn:'blur'}" />
+      </div>
+      <div class="line">
+        <label for="password">Kodeord:</label>
+        <input type="password" name="password" [(ngModel)]="password" [ngModelOptions]="{updateOn:'blur'}" />
+      </div>
+      <div class="line">
+        <button type="submit">Login</button>
+        <div class="loginstatus" [innerHTML]="loginmessage"></div>
+      </div>
+    </form>
+  </div>
+</div>  

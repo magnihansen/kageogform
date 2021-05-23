@@ -1,0 +1,29 @@
+<section id="home" class="home">
+    <div class="overlay">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 ">
+                    <div class="main_home_slider text-center">
+                        <ngx-slick-carousel class="carousel" 
+                            #slickModal="slick-carousel" 
+                            [config]="slideConfig" 
+                            (init)="slickInit($event)"
+                            (breakpoint)="breakpoint($event)"
+                            (afterChange)="afterChange($event)"
+                            (beforeChange)="beforeChange($event)">
+                            <div ngxSlickItem *ngFor="let slide of slides;" class="single_home_slider">
+                                <div class="main_home wow fadeInUp">
+                                    <h1 class="honewrapper">{{slide.title}}</h1>
+                                    <p>{{slide.content}}</p>
+                                    <div class="home_btn">
+                                        <a href="/{{href}}{{slide.link}}" class="btn btn-primary">LÆS MERE..</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </ngx-slick-carousel>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

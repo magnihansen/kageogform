@@ -1,0 +1,81 @@
+<section id="footer" class="footer_widget">
+    <div class="video_overlay">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="main_widget">
+                            <div class="col-sm-3 col-xs-12">
+                                <div class="single_widget wow fadeIn" data-wow-duration="800ms">
+                                    <div class="footer_title">
+                                        <h4>Beats kager</h4>
+                                        <div class="separator"></div>
+                                    </div>
+                                    <p>Beatas kager vil være med til at gøre jeres dage uforglemmelige.<br />
+                                        Vi vil forsøge at indfri alle jeres forventninger.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-3  col-xs-12">
+                                <div class="single_widget wow fadeIn" data-wow-duration="800ms">
+
+                                    <div class="footer_title">
+                                        <h4>Sitemap</h4>
+                                        <div class="separator"></div>
+                                    </div>
+                                    <ul>
+                                        <li><a href="#home">Forside</a></li>
+                                        <li><a href="#cakes">Kager</a></li>
+                                        <li><a href="#order">Bestilling</a></li>
+                                        <li><a href="#portfolio">Portfolio</a></li>
+                                        <li><a href="#clogo">Leverandører</a></li>
+                                        <li><a href="#contact">Kontakt</a></li>
+                                    </ul> 
+                                </div>
+                            </div>
+
+                            <div class="col-sm-3  col-xs-12">
+                                <div class="single_widget wow fadeIn" data-wow-duration="800ms">
+
+                                    <div class="footer_title">
+                                        <h4>Artikler</h4>
+                                        <div class="separator"></div>
+                                    </div>
+                                    <ul>
+                                        <li *ngFor="let article of articles; let odd = odd; let even = even;">
+                                            <a href="{{article.link}}">{{article.created}} {{article.title}}</a>
+                                        </li>
+                                    </ul> 
+                                </div>
+                            </div>
+
+                            <div class="col-sm-3 col-xs-12">
+                                <div class="single_widget wow fadeIn" data-wow-duration="800ms">
+
+                                    <div class="footer_title">
+                                        <h4>Nyhedsbrev</h4>
+                                        <div class="separator"></div>
+                                    </div>
+
+                                    <div class="footer_subcribs_area">
+                                        <p>Tilmeld vores nyhedsbrev for at få et udsnit af vores nyeste kreationer, tilbud og nyheder.</p>
+                                        <form class="navbar-form navbar-left" role="search">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" placeholder="Søg på siden">
+                                                <button type="submit" class="submit_btn"></button>
+                                            </div>
+
+                                        </form>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

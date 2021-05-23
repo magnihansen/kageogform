@@ -1,0 +1,15 @@
+.login {
+    height: 200px;
+    text-align: center;
+    padding: 50px;
+}
+.login .fields .line { 
+    width: 100%;
+    padding: 5px;
+}
+.login .fields .line label {
+    width: 10%;
+}
+.login .fields .line input {
+    width: 200px;
+}

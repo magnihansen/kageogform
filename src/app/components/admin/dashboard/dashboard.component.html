@@ -1,0 +1,97 @@
+<section id="home" class="home">
+    <div class="low_overlay">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="main_home_slider text-center"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="pagedashboard">
+  <div class="dashboard_header">
+    <h1>Administrer alt indhold</h1>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="addnew newcontent" (click)="toggleAddNewContent()">
+          <div class="fa fa-plus"></div>
+          Opret nyt indhold
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="addnew newtype" (click)="toggleAddNewType()">
+          <div class="fa fa-plus"></div>
+          Opret ny indholdstype
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="newfields" *ngIf=showAddContent>
+    <form (submit)="addContent()">
+      <div>
+        <label for="contentname">Navn</label>
+        <input type="text" name="contentname" [(ngModel)]="contentname" />
+      </div>
+      <div>
+        <label for="contentlink">Link/anchor</label>
+        <input type="text" name="contentlink" [(ngModel)]="contentlink" />
+      </div>
+      <div>
+        <label for="newcontenttext">Tekst</label>
+        <input type="text" name="newcontenttext" [(ngModel)]="newcontenttext"/>
+      </div>
+      <div>
+        <label for="contentrank">Rank</label>
+        <select name="contentrank" [(ngModel)]="contentrank">
+          <option *ngFor="let num of ranknumbers;" [value]="num">{{num}}</option>
+        </select>
+      </div>
+      <div>
+        <label for="contenttype">Type</label>
+        <select name="contenttype" [(ngModel)]="contenttype">
+          <option *ngFor="let ct of contenttypes" [value]="ct.value">{{ct.name}}</option>
+        </select>
+      </div>
+      <button type="submit">Opret indhold</button>
+      <button type="reset" (click)="toggleAddNewContent()">Annuller</button>
+    </form>
+  </div>
+  <div class="newfields" *ngIf=showAddType>
+    <form (submit)="addType()">
+      <div>
+        <label for="typename">Navn</label>
+        <input type="text" name="typename" [(ngModel)]="typename" />
+      </div>
+      <button type="submit">Opret indholdstype</button>
+      <button type="reset" (click)="toggleAddNewType()">Annuller</button>
+    </form>
+  </div>
+  <div class="pages_content" *ngFor="let c of contentExtendeds; let odd = odd; let even = even;">
+    <div *ngIf="isNewType(c.contenttype)" class="headerline">
+      <h4>{{c.contenttypename}}</h4>
+      <h5>&nbsp;</h5>
+    </div>
+    <div id="{{c.uid}}" class="contentline" [ngClass]="{ odd: odd, even: even }">
+      <h4>{{c.title}}</h4>
+      <h5>
+        <a href="admin/content/{{c.uid}}">
+          <div class="fa fa-edit"></div>
+        </a>
+        <div class="fa fa-remove" (click)="removeContent(c)" *ngIf="contents.length>1"></div>
+      </h5>
+    </div>
+  </div>
+
+  <div class="messages" *ngFor="let m of messages; let odd = odd; let even = even;">
+    <div id="{{c.uid}}" class="messageline" [ngClass]="{ odd: odd, even: even }">
+      <h4>{{c.title}}</h4>
+      <h5>
+        <a href="admin/message/{{c.uid}}">
+          <div class="fa fa-edit"></div>
+        </a>
+        <div class="fa fa-remove" (click)="removeMessage(c)" *ngIf="messages.length>1"></div>
+      </h5>
+    </div>
+  </div>
+</section>

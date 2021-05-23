@@ -1,0 +1,38 @@
+<section id="home" class="home">
+  <div class="low_overlay">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 ">
+          <div class="main_home_slider text-center"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="pagedashboard">
+  <div class="editpage">
+    <form (ngSubmit)="onSubmit()" [ngFormOptions]="{updateOn:'submit'}">
+      <div class="field">
+        <label for="title">Navn:</label>
+        <br />
+        <input type="text" name="title" [(ngModel)]="title" [ngModelOptions]="{updateOn:'blur'}" />
+      </div>
+      <div class="field">
+        <label for="title">Rank:</label>
+        <br />
+        <select name="rank" [(ngModel)]="rank" [ngModelOptions]="{updateOn:'change'}">
+          <option *ngFor="let num of ranknumbers;" [value]="num">{{num}}</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="content">Tekst:</label>
+        <br />
+        <app-ngx-editor name="content" [spellcheck]="true" [(ngModel)]="content">
+        </app-ngx-editor>
+      </div>
+      <button type="submit">Gem</button>
+      <div class="editor_message">{{message_status}}</div>
+    </form>
+  </div>
+  <button (click)="gotoDashboard()">Dashboard</button>
+</section>

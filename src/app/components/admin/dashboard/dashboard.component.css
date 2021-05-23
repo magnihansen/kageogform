@@ -1,0 +1,45 @@
+.pages_content .contentline, .pages_content .headerline  {
+    height: 40px;
+    line-height: 40px;
+    padding-left: 10px;
+}
+.pages_content .headerline { margin-top: 20px; border-bottom: solid 1px black; }
+.pages_content .headerline h4 { color:#ff7200; font-size: 30px; text-transform: capitalize; }
+.pages_content .contentline:first {
+    margin-top: 20px;
+}
+.pages_content .contentline.odd {
+    background-color: darkgrey;
+}
+.pages_content .contentline:hover {
+    background-color: #e4e4e4;
+}
+.pages_content .contentline h4, .pages_content .contentline h5 {
+    display: inline-block;
+    width: 50%;
+}
+.pages_content .contentline h5 {
+    text-align: right;
+}
+.pages_content .contentline h5 .fa {
+    padding-right: 8px;
+    font-size: 18px;
+}
+.dashboard_header {
+    margin-bottom: 20px;
+}
+.dashboard_header .addnew {
+    border: solid 1px #c2c2c2;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    padding: 5px;
+}
+.dashboard_header .addnew:hover {
+    background-color: #c2c2c2;
+    color: #000;
+    cursor: pointer;
+}
+.dashboard_header .addnew:nth-of-type(n+1){
+    margin-top: 5px;
+}
